@@ -19,5 +19,5 @@ console.log(iterator.current());
 // --> [8, 9, 0]
 console.log(iterator.forward());
 // --> [9, 0, 1]
-console.log(iterator.jumpTo(12));
+console.log(iterator.jumpTo(10));
 console.log(iterator.current());
