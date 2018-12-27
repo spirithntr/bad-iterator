@@ -68,4 +68,15 @@ Iterator.prototype.jumpTo = function (i) {
   this.windowEnd = this.windowWidth + this.windowStart;
   // console.log('windowStart:', this.windowStart);
 }
-
+Iterator.prototype.update = function (context, parameter) {
+  this[context](parameter);
+}
+Iterator.prototype.remove = function (position) {
+  this.array.splice(position, 1);
+}
+Iterator.prototype.insert = function (element) {
+  this.array.unshift(element);
+}
+Iterator.prototype.append = function (element) {
+  this.array.push(element);
+}

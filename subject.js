@@ -1,4 +1,4 @@
-import ObserverList from './observerList.js'
+import ObserverList from './observerList.js';
 export default function Subject() {
   this.observers = new ObserverList();
 }
@@ -11,9 +11,9 @@ Subject.prototype.removeObserver = function (observer) {
   this.observers.removeAt(this.observers.indexOf(observer, 0));
 };
 
-Subject.prototype.notify = function (context) {
+Subject.prototype.notify = function (context, parameter) {
   var observerCount = this.observers.count();
   for (var i = 0; i < observerCount; i++) {
-    this.observers.get(i).update(context);
+    this.observers.get(i).update(context,parameter);
   }
 };
