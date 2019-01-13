@@ -7,7 +7,7 @@ console.log(iterator.current());
 // --> [0, 1, 2]
 console.log(iterator.forward());
 // --> [1, 2, 3]
-console.log(iterator.jumpTo(5));
+console.log(iterator.jumpTo(4));
 // --> undefined
 console.log(iterator.current());
 // --> [5, 6, 7]
